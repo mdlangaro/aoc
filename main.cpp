@@ -51,12 +51,12 @@ bool cheio(const pilha &stk)
 // Confere se o tipo do valor passado por parâmetro é o requisitado.
 template <typename T>
 bool checaTipoFloat(T) {
-  return typeid(T) == typeid(float);
+  return (typeid(T) == typeid(float)) ;
 }
 
 // insere no topo da pilha
 void stackPush(pilha &stk, float value, bool full = false)
-{ 
+{
   if (full)
   {
     std::cout << "Stack overflow\n!" << std::endl;
@@ -245,7 +245,12 @@ int main()
     {
       stackPush(programStack, stof(instructions[1]), cheio(programStack));
     }
-
+    else if (instructions[0] == "pushi" && instructions[1] == "" ||
+            instructions[0] == "push" && instructions[1] == "" ||
+            instructions[0] == "pop" && instructions[1] == "") 
+      {
+        std::cout << "E necessario atribuir um valor ao utilizar o comando " + instructions[0] + ".\n" << std::endl;
+      }
     else if (instructions[0] == "push")
     {            
       address = hexConvert(instructions[1]);
@@ -259,6 +264,7 @@ int main()
       if (vazio(programStack))
       {
         std::cout << "Stack underflow\n" << std::endl;
+        continue;
       }
       else
       {        
@@ -266,13 +272,19 @@ int main()
         memory[address] = programStack.elementos[programStack.top];
         history[instructions[1]] = address;
         stackPop(programStack);
+        continue;
       }
     }
 
     else if (instructions[0] == "print")
     {
+      if(vazio(programStack)){
+        std::cout<< "Pilha esta vazia\n";
+      }else{
       std::cout << elementoDoTopo(programStack) << std::endl;
       stackPop(programStack);
+      }
+      continue;
     }
 
     else if(instructions[0] == "input")
@@ -280,57 +292,79 @@ int main()
       std::cout<<"Digite o numero que deseja inserir no topo da pilha: \n" << std::endl;
       getline(std::cin, userInput);
       stackPush(programStack, stof(userInput), cheio(programStack));
+      continue;
     }
 
     else if(instructions[0] == "size")
     {
       std::cout << stackSize(programStack) << std::endl;
+      continue;
     }
 
     else if (instructions[0] == "top") {
-      elementoDoTopo(programStack);
+      if(vazio(programStack)){
+        std::cout<< "Pilha esta vazia\n";
+      }else{
+      std::cout << elementoDoTopo(programStack) << std::endl;
+      }
+      continue;
     }
 
     else if (instructions[0] == "add")
     {
       mathOP(programStack, '+');
+      continue;
     }
 
     else if (instructions[0] == "sub")
     {
       mathOP(programStack, '-');
+      continue;
     }
 
     else if (instructions[0] == "mul")
     {
       mathOP(programStack, '*');
+      continue;
     }
 
     else if (instructions[0] == "div")
     {
       mathOP(programStack, '/');
+      continue;
     }
 
     else if (instructions[0] == "swap")
     {
       stackSwap(programStack, vazio(programStack));
+      continue;
     }
 
     else if (instructions[0] == "drop")
     {
       stackPop(programStack);
+      continue;
     }
-
+    
     else if (instructions[0] == "dup")
     {
       stackPush(programStack, elementoDoTopo(programStack), cheio(programStack));
-    } else {
+      continue;
+    } else if (instructions[0] != "hlt") {
       std::cout << "A operacao " + instructions[0] + " nao foi encontrada.\nCertifique-se que o comando foi digitado corretamente ou escreva \"help\" para visualizar as instrucoes disponiveis.\n" << std::endl;;
     }
     // fim das verificacoes de instrucao
   } // fim do while loop
 
   // Ao digitar hlt:
+  std::cout << "\nValores restantes na pilha: \n" << std::endl; // começa esvaziar a pilha
+  while (!vazio(programStack))
+  {
+    std::cout << elementoDoTopo(programStack) << std::endl;
+    stackPop(programStack);
+  }
+  std::cout << "A pilha foi esvaziada\n" << std::endl;
+
   std::cout << "Numero de enderecos manipulados: " << history.size() << std::endl;
   std::cout << "Enderecos manipulados e seus respectivos valores: " << std::endl;
 

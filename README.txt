@@ -8,17 +8,17 @@ v1
 
 Obrigado por baixar Cergaro Stack.
 
-Este arquivo contém informações sobre o programa, sua utilização, como rodá-lo ou compilá-lo.
+Este arquivo contï¿½m informaï¿½ï¿½es sobre o programa, sua utilizaï¿½ï¿½o, como rodï¿½-lo ou compilï¿½-lo.
 ________________________
 
-CONTEÚDO:
+CONTEï¿½DO:
 ________________________
  
 1) SOBRE
 
-2) UTILIZAÇÃO
+2) UTILIZAï¿½ï¿½O
 
-3) LISTA DE INSTRUÇÕES
+3) LISTA DE INSTRUï¿½ï¿½ES
 
 4) EXECUTANDO O SCRIPT DE MANEIRA ALTERNATIVA
 ___________________________________________
@@ -26,139 +26,130 @@ ___________________________________________
 1) SOBRE
 _____________________
 
-Cergaro Stack é um simulador open source de arquitetura de pilha. O script
+Cergaro Stack ï¿½ um simulador open source de arquitetura de pilha. O script
 pode ser rodado em ambos os Sistemas Operacionais Windows e Linux.
 
-Para utilizar o programa o usuário dispõe de uma série de instruções -que 
-se encontram listadas e explicadas em uma seção posterior do documento-,
-de uma memória de 256 endereços de 32 bits cada e uma pilha com espaço 
-para 16 valores de ponto flutuante de precisão simples.
+Para utilizar o programa o usuï¿½rio dispï¿½e de uma sï¿½rie de instruï¿½ï¿½es -que 
+se encontram listadas e explicadas em uma seï¿½ï¿½o posterior do documento-,
+de uma memï¿½ria de 256 endereï¿½os de 32 bits cada e uma pilha com espaï¿½o 
+para 16 valores de ponto flutuante de precisï¿½o simples.
 
 Para executar o programa, basta clicar no arquivo "main.exe", o programa 
-funciona no formato de terminal, onde deverão ser digitadas as instruções
-e também onde aparecerão os resultados e mensagens.
+funciona no formato de terminal, onde deverï¿½o ser digitadas as instruï¿½ï¿½es
+e tambï¿½m onde aparecerï¿½o os resultados e mensagens.
 
-Caso o arquivo main.exe não funcione ou opte-se por não utilizá-lo, o usuário
-pode abrir o código fonte "main.cpp" em uma IDE de sua preferência
-(recomenda-se o uso do Visual Studio Code, cujas orientações estarão disponíveis
-na seção 4) e executar o código nela.
+Caso o arquivo main.exe nï¿½o funcione ou opte-se por nï¿½o utilizï¿½-lo, o usuï¿½rio
+pode abrir o cï¿½digo fonte "main.cpp" em uma IDE de sua preferï¿½ncia
+(recomenda-se o uso do Visual Studio Code, cujas orientaï¿½ï¿½es estarï¿½o disponï¿½veis
+na seï¿½ï¿½o 4) e executar o cï¿½digo nela.
 
 _____________________
 
-2) UTILIZAÇÃO
+2) UTILIZAï¿½ï¿½O
 ______________________
 
-Não há sensibilidade de caso, ou seja, as instruções podem ser escritas em caixa baixa,
-caixa alta ou de forma mista, não havendo interferência na execução do programa.
+Nï¿½o hï¿½ sensibilidade de caso, ou seja, as instruï¿½ï¿½es podem ser escritas em caixa baixa,
+caixa alta ou de forma mista, nï¿½o havendo interferï¿½ncia na execuï¿½ï¿½o do programa.
 	
-Para as instruções que recebem um operando (pushi, push e pop), faz-se necessário a 
-separação por espaço em branco (' ') entre a operação
-e o seu respectivo operando, caso contrário haverá erro na execução do programa. Também
-é necessário ressaltar que a ordem de digitação é sempre 
-Operação -> Operando (quando houver), caso haja inversão na ordem acarretará em erro.
+Para as instruï¿½ï¿½es que recebem um operando (pushi, push e pop), faz-se necessï¿½rio a 
+separaï¿½ï¿½o por espaï¿½o em branco (' ') entre a operaï¿½ï¿½o
+e o seu respectivo operando, caso contrï¿½rio haverï¿½ erro na execuï¿½ï¿½o do programa. Tambï¿½m
+ï¿½ necessï¿½rio ressaltar que a ordem de digitaï¿½ï¿½o ï¿½ sempre 
+Operaï¿½ï¿½o -> Operando (quando houver), caso haja inversï¿½o na ordem acarretarï¿½ em erro.
 
-Após a instrução de encerramento (Hlt), será exibido ao usuário quais endereços foram
-modificados por ele e quais foram os últimos valores armazenados nos respectivos endereços.
+Apï¿½s a instruï¿½ï¿½o de encerramento (Hlt), serï¿½ exibido ao usuï¿½rio quais endereï¿½os foram
+modificados por ele e quais foram os ï¿½ltimos valores armazenados nos respectivos endereï¿½os.
 
 ______________________
 
-3)LISTA DE INSTRUÇÕES
+3)LISTA DE INSTRUï¿½ï¿½ES
 
 
-    Instrução					Descrição
+    Instruï¿½ï¿½o					Descriï¿½ï¿½o
 __________________________________________________________
 
 
-Pushi valor		Insere no topo da pilha o valor imediato fornecido como operando da instrução. 
-			Caso a pilha esteja cheia, uma mensagem indicando o problema (stack overflow) será entregue ao usuário.
+Pushi valor		Insere no topo da pilha o valor imediato fornecido como operando da instruï¿½ï¿½o. 
+			Caso a pilha esteja cheia, uma mensagem indicando o problema (stack overflow) serï¿½ entregue ao usuï¿½rio.
 
 
 
-Push endereço		Insere na pilha uma cópia do valor contido na memória no endereço fornecido como operando da instrução,
-			é necessário utilizar a notação hexadecimal para a escrita do endereço.
-			Caso a pilha esteja cheia, uma mensagem indicando o problema (stack overflow) será entregue ao usuário.	
+Push endereï¿½o		Insere na pilha uma cï¿½pia do valor contido na memï¿½ria no endereï¿½o fornecido como operando da instruï¿½ï¿½o,
+			ï¿½ necessï¿½rio utilizar a notaï¿½ï¿½o hexadecimal para a escrita do endereï¿½o.
+			Caso a pilha esteja cheia, uma mensagem indicando o problema (stack overflow) serï¿½ entregue ao usuï¿½rio.	
 
 
 
-Pop endereço		Retira um valor do topo da pilha e copia-o para a memória no endereço fornecido como operando da instrução,
-			é necessário utilizar
-			a notação hexadecimal para a escrita do endereço.
-			Caso a pilha esteja vazia, uma mensagem indicando o problema (stack underflow) será entregue ao usuário.
+Pop endereï¿½o		Retira um valor do topo da pilha e copia-o para a memï¿½ria no endereï¿½o fornecido como operando da instruï¿½ï¿½o,
+			ï¿½ necessï¿½rio utilizar
+			a notaï¿½ï¿½o hexadecimal para a escrita do endereï¿½o.
+			Caso a pilha esteja vazia, uma mensagem indicando o problema (stack underflow) serï¿½ entregue ao usuï¿½rio.
 
 
 
-Size			Exibe o tamanho atual da pilha do programa para o usuário, permitindo que ele tenha controle das operações
+Size			Exibe o tamanho atual da pilha do programa para o usuï¿½rio, permitindo que ele tenha controle das operaï¿½ï¿½es
 			que precisa e deseja executar.
 
 
-Input			Usuário insere a palavra "input", aperta a tecla ENTER e, logo a seguir, insere o valor que deseja adicionar
+Top			Exibe o valor armazenado no topo da pilha sem removÃª-lo.
+
+
+Input			Usuï¿½rio insere a palavra "input", aperta a tecla ENTER e, logo a seguir, insere o valor que deseja adicionar
 			no topo da pilha. 
 
 
-Print			Retira um valor do topo da pilha e exibe-o no dispositivo de saída padrão do usuário.
-			Caso a pilha não possua valores suficientes para a operação, uma mensagem indicando o problema (stack underflow)
-			será entregue ao usuário.
+Print			Retira um valor do topo da pilha e exibe-o no dispositivo de saï¿½da padrï¿½o do usuï¿½rio.
+			Caso a pilha nï¿½o possua valores suficientes para a operaï¿½ï¿½o, uma mensagem indicando o problema (stack underflow)
+			serï¿½ entregue ao usuï¿½rio.
 
 
 Add			Retira dois valores do topo da pilha (A e B na ordem de retirada) e calcula B+A, inserindo o resultado no topo 
-			da pilha.Caso a pilha não possua valores suficientes para a operação, uma mensagem indicando o problema
-			(stack underflow) será entregue ao usuário.
+			da pilha.Caso a pilha nï¿½o possua valores suficientes para a operaï¿½ï¿½o, uma mensagem indicando o problema
+			(stack underflow) serï¿½ entregue ao usuï¿½rio.
 	
 
 Sub			Retira dois valores do topo da pilha (A e B na ordem de retirada) e calcula B-A, inserindo o resultado no topo
-			da pilha. Caso a pilha não possua valores suficientes para a operação, uma mensagem indicando o problema
-			(stack underflow) será entregue ao usuário.
+			da pilha. Caso a pilha nï¿½o possua valores suficientes para a operaï¿½ï¿½o, uma mensagem indicando o problema
+			(stack underflow) serï¿½ entregue ao usuï¿½rio.
 
 
 Mul			Retira dois valores do topo da pilha (A e B na ordem de retirada) e calcula B*A, inserindo o resultado no topo
-			da pilha. Caso a pilha não possua valores suficientes para a operação, uma mensagem indicando o problema 
-			(stack underflow) será entregue ao usuário.
+			da pilha. Caso a pilha nï¿½o possua valores suficientes para a operaï¿½ï¿½o, uma mensagem indicando o problema 
+			(stack underflow) serï¿½ entregue ao usuï¿½rio.
 
 
 Div			Retira dois valores do topo da pilha (A e B na ordem de retirada) e calcula B/A, inserindo o resultado no topo
 			da pilha. Caso o segundo valor retirado da pilha (B) seja igual a zero, uma mensagem indicando o problema 
-			(divisão por zero) será entregue ao usuário.
-			Caso a pilha não possua valores suficientes para a operação, uma mensagem indicando o problema (stack underflow)
-			será entregue ao usuário.
+			(divisï¿½o por zero) serï¿½ entregue ao usuï¿½rio.
+			Caso a pilha nï¿½o possua valores suficientes para a operaï¿½ï¿½o, uma mensagem indicando o problema (stack underflow)
+			serï¿½ entregue ao usuï¿½rio.
 
 
 
 Swap			Inverte a ordem dos dois valores no topo da pilha.
-			Caso a pilha não possua valores suficientes para a operação, uma mensagem indicando o problema (stack underflow)
-			será entregue ao usuário.
+			Caso a pilha nï¿½o possua valores suficientes para a operaï¿½ï¿½o, uma mensagem indicando o problema (stack underflow)
+			serï¿½ entregue ao usuï¿½rio.
 
 
 Drop			Descarta o valor no topo da pilha.
-			Caso a pilha não possua valores suficientes para a operação, uma mensagem indicando o problema (stack underflow)
-			será entregue ao usuário.
+			Caso a pilha nï¿½o possua valores suficientes para a operaï¿½ï¿½o, uma mensagem indicando o problema (stack underflow)
+			serï¿½ entregue ao usuï¿½rio.
 
 
-Dup			Insere uma cópia do valor atual que está no topo da pilha.
-			Caso a pilha esteja cheia, uma mensagem indicando o problema (stack overflow) será entregue ao usuário.	
-			Caso a pilha não possua valores suficientes para a operação, uma mensagem indicando o problema (stack underflow)
-			será entregue ao usuário.
+Dup			Insere uma cï¿½pia do valor atual que estï¿½ no topo da pilha.
+			Caso a pilha esteja cheia, uma mensagem indicando o problema (stack overflow) serï¿½ entregue ao usuï¿½rio.	
+			Caso a pilha nï¿½o possua valores suficientes para a operaï¿½ï¿½o, uma mensagem indicando o problema (stack underflow)
+			serï¿½ entregue ao usuï¿½rio.
 
 
-Hlt			Encerra a execução do programa.
+Hlt			Encerra a execuï¿½ï¿½o do programa.
 ______________________
 
-4) EXECUTANDO O SCRIPT DE MANEIRA ALTERNATIVA
+4) COMO COMPILAR
 ______________________
 
-Nesta seção explicar-se-á como executar o código fonte (que é aberto ao usuário) caso o arquivo main.exe enfrente 
-problemas de utilização ou apenas seja desejo do usuário utilizar o programa desta maneira.
-Como supramencionado na seção anterior, recomenda-se o uso da IDE Visual Studio Code, pois o exemplo fornecido (que pode ser
-aproveitado tanto para linux quanto para windows) envolve seu uso.
-
-Primeiro, o usuário precisa ter instalado a extensão "code runner" em sua máquina, o que facilitará todo o processo. 
-Isto pode ser feito ao clicar no ícone com formato semelhante a caixas, na barra à esquerda e digitar "code runner"
-na busca e instalá-lo. É necessário fechar e abrir novamente a IDE para que a extensão seja integrada.
-Clicando em "file" ou "arquivo" em português, então clica-se em "open file" ou "abrir arquivo" e seleciona-se o código fonte
-do programa, "main.cpp". 
-
-Então, a extensão code runner adicionará um ícone em forma de triângulo no canto superior direito, ao clicar neste ícone,
-seleciona-se a opção "debug c/c++ file".
-Isto abrirá um terminal na parte inferior da IDE, deve-se esperar que o programa seja compilado pela máquina.
-Uma vez feita a compilação, clica-se novamente no ícone triangular porém, desta vez, na opção "run code".
-Agora o programa estará sendo executado no terminal do VS Code e poderá ser utilizado pelo usuário.
-_______________________
+Para compilar Ã© necessÃ¡rio estar em uso do sistema operacional Linux e possuir o compilador g++. 
+Por meio do terminal, navegue atÃ© a pasta onde ambos os arquivos, main.cpp e cerbaroFunctions.cpp, estÃ£o localizados.
+Digite o seguinte comando: g++ main.cpp -o NomeDoSeuArquivo
+Onde NomeDoSeuArquivo pode ser de sua escolha.
+Para executar o programa, na mesma navegaÃ§Ã£o, digite o comando: ./NomeDoSeuArquivo, como antes, substituindo o NomeDoSeuArquivo pelo nome escolhido.
